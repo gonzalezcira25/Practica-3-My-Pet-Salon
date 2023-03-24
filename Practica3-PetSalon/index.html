@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Pet Salon-Página Principal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="stylesheetmain.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<style>
+  
+  body {
+    font-size:16px;
+    background-image: url("/imgs/Fondo veterinaria.jpg");background-repeat:repeat-y;background-size:cover;margin:0px;
+    background-color: rgb(230, 247, 255);
+    background-blend-mode: lighten;
+  }
+  .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+  .w3-half img:hover{opacity:1}
+  figure{display:flex;align-items:center;gap:1rem}
+  
+  
+</style>
+</head>
+<body>
+
+<!-- Navegador izquierdo Menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:280px;font-weight:bold;opacity: 0.7;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:2px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>My Pet Salon</b><style>.w3-jumbo b{text-align: center;}</style></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="/Página registro/register.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registro de Servicio</a> 
+    <a href="#Galeria" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Galeria</a> 
+    <a href="#Equipodetrabajo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Equipo de Trabajo</a> 
+    <a href="#costos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Costos</a> 
+    <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>My Pet Salon</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px;">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px;" id="showcase">
+    <figure style="justify-content: center;">
+      <img class="perritotitulo" src="/imgs/perritoo.png" alt="perritotext" style="display: inline-block;height:90px">
+      <figcaption><h1 class="w3-jumbo"><b>My Pet Salon - Bienvenidos</b></h1></figcaption>
+    </figure>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Historia</b></h1>
+    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis blanditiis tempora voluptatum atque id eveniet ullam minima pariatur minus? Officiis labore dicta iusto sint repudiandae nobis eaque reprehenderit dolorem molestias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci enim optio voluptates, quasi recusandae esse vero perspiciatis voluptatum. Culpa a eum voluptatum possimus molestias omnis molestiae dolorum alias maxime eius?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos beatae incidunt pariatur ullam numquam quas blanditiis odit dignissimos doloremque facere? Eaque quae repudiandae deserunt quo nobis alias, suscipit neque tempora.
+    </p>
+  </div>
+
+  <!-- Galeria -->
+  <div class="w3-container" id="Galeria" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Galeria</b></h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut dolore sequi quaerat sunt perspiciatis ducimus tenetur voluptates accusamus accusantium, nobis, dignissimos quas facere. Omnis atque nulla porro laborum quidem?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati asperiores aspernatur repellat inventore accusamus assumenda consequatur, eos repellendus id animi quod numquam, eum minus velit adipisci dolores similique! Quibusdam, reiciendis!
+    </p>
+    
+
+      <!-- Photo grid -->
+    <div class="w3-row-padding">
+      <div class="container-photo">
+        <img src="/imgs/chihuahua.jpg" onclick="onClick(this)" alt="Chihuahua">
+        <img src="/imgs/periquitofoto.png"  onclick="onClick(this)" alt="Perico">
+        <img src="/imgs/gatofoto.png"  onclick="onClick(this)" alt="Gato">
+      </div>
+    </div>
+  </div>  
+
+        
+  <!-- Equipo de trabajo -->
+  <div class="w3-container" id="Equipodetrabajo" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Equipo de trabajo</b></h1>
+    
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          <h3>Omega</h3>
+          <p class="w3-opacity">Veterinario</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          <h3>Alfa</h3>
+          <p class="w3-opacity">Veterinario</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          <h3>Beta</h3>
+          <p class="w3-opacity">Estilista canino</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Costos -->
+  <div class="w3-container" id="costos" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Costos</b></h1>
+    
+    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Básico</li>
+        <li class="w3-padding-32">Consulta</li>
+        <li class="w3-padding-32">Baño</li>
+                
+        <li class="w3-padding-16">
+          <h2>$ 800</h2>
+          <span class="w3-opacity">pesos</span>
+        </li>
+        
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-blue w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Consulta</li>
+        <li class="w3-padding-16">Baño</li>
+        <li class="w3-padding-16">Vacunas</li>
+        <li class="w3-padding-16">
+          <h2>$ 1500</h2>
+          <span class="w3-opacity">pesos</span>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Contacto -->
+  <div class="w3-container" id="contacto" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Contacto </b></h1>
+       <p>¿Busca más información? Aquí encontrará nuestros datos de contacto.</p>
+  </div>
+ 
+
+<!-- End page content -->
+</div>
+<!--Footer-->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>

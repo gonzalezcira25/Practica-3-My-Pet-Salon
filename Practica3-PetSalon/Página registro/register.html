@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>My Pet Salon-Registro</title>
+</head>
+<body>
+    <!-- Navegador izquierdo Menu -->
+    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:280px;font-weight:bold;opacity: 0.7;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:2px">Close Menu</a>
+        <div class="w3-container">
+        <h3 class="w3-padding-64"><b>My Pet Salon</b><style>.w3-jumbo b{text-align: center;}</style></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+            <a href="/Página registro/register.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Registro de Servicio</a> 
+            <a href="#Galeria" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Galeria</a> 
+            <a href="#Equipodetrabajo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Equipo de Trabajo</a> 
+            <a href="#costos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Costos</a> 
+            <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+        </div>
+    </nav>
+    
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+        <span style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>My Pet Salon</b></span>
+    </header>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+
+    <div class="w3-main" style="margin-left:340px;margin-right:40px;margin-top: 70px;">
+    <div class="tituloprincipal">
+        <img class="perritotitulo" src="/imgs/perritoo.png" alt="perritotext">
+        <h1>Pet Salon</h1>
+        <h2>Registra una nueva mascota</h2>
+    </div>
+    <div>        
+        <div class="formulario">
+            <input type="text" placeholder="Ingresa el nombre de la mascota" id="txtNombre">
+            <input type="text" placeholder="Ingresa el género de la mascota" id="txtGenero">
+            <input type="text" placeholder="Ingresa la raza de la mascota" id="txtRaza">
+            <input type="text" placeholder="Ingresa la edad de la mascota en años" id="txtEdad">
+            <input type="text" placeholder="Ingresa el nombre del dueño" id="txtDueno">
+            <input type="text" placeholder="Ingresa el teléfono del dueño" id="txtTelDueno">
+            <select id="selAnimal">
+                <option value="" disabled selected>-- Selecciona un animal --</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Hamster">Hamster</option>
+                <option value="Raton">Raton</option>
+                <option value="Perico">Periquito</option>
+            </select>
+            <select id="selServicio">
+                <option value="" disabled selected>-- Selecciona un servicio --</option>
+                <option value="Vacunas">Vacunas</option>
+                <option value="Grooming">Grooming</option>
+            </select>
+            <select id="selPago">
+                <option value="" disabled selected>-- Selecciona un método de pago --</option>
+                <option value="Pago con tarjeta">Pago con tarjeta</option>
+                <option value="Efectivo">Efectivo</option>
+            </select>
+            
+            <button onclick="registro();">Registrar</button>
+        </div>
+
+        <h2>Mascotas en el sistema</h2>
+        <div id="mascotas">
+            <!--aqui se insertarán las mascotas-->
+            
+        </div>
+    
+       
+    
+    </div>
+    </div>
+    <!--Footer-->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"></div>
+    <script src="register.js"></script>
+    <script src="display.js"></script>
+    <script>
+        
+        // Script to open and close sidebar
+        function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+        }
+        
+        function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+        }
+    </script>
+</body>
+</html>
